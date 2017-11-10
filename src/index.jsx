@@ -109,6 +109,7 @@ export default class DatePicker extends React.Component {
     useWeekdaysShort: PropTypes.bool,
     utcOffset: PropTypes.number,
     value: PropTypes.string,
+    defaultValue: PropTypes.string,
     weekLabel: PropTypes.string,
     withPortal: PropTypes.bool,
     yearDropdownItemNumber: PropTypes.number,
@@ -469,6 +470,7 @@ export default class DatePicker extends React.Component {
     return React.cloneElement(customInput, {
       ref: (input) => { this.input = input },
       value: inputValue,
+      defaultValue: inputValue,
       onBlur: this.handleBlur,
       onChange: this.handleChange,
       onClick: this.onInputClick,
